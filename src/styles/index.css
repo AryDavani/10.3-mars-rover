@@ -19,6 +19,8 @@ img {
   margin: 1vw;
   flex-basis: 20%;
   border-radius: 5px;
+  box-shadow: 0 0 50px black;
+
 }
 
 .flex {
