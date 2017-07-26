@@ -51,6 +51,7 @@ export default class GetImageForm extends Component {
     })
     return (
       <div>
+        <h1>Mars Rover Images</h1>
         <form className="inputs flex-center">
           <div>
             <label>Rover</label>
@@ -78,7 +79,7 @@ export default class GetImageForm extends Component {
 
         <GetImageButton handleSubmit={ this._handleSubmit }/>
 
-        <div className="flex">
+        <div className="images-container">
           { allImages }
         </div>
 

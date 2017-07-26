@@ -11,6 +11,7 @@ body {
 
 .inputs {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 img {
@@ -20,10 +21,19 @@ img {
   flex-basis: 20%;
   border-radius: 5px;
   box-shadow: 0 0 50px black;
-
 }
 
-.flex {
+h1 {
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 40px;
+  padding: 20px;
+  background-color: #161616;
+  box-shadow: 0 0 20px black;
+}
+
+.images-container {
+  margin-top: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
