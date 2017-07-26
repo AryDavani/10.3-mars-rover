@@ -8,15 +8,19 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
 .inputs {
   margin-top: 50px;
 }
+
 img {
   height: 400px;
   width: auto;
   margin: 1vw;
   flex-basis: 20%;
+  border-radius: 5px;
 }
+
 .flex {
   display: flex;
   flex-wrap: wrap;
