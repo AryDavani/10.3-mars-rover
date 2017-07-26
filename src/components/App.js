@@ -3,9 +3,6 @@ import '../styles/App.css';
 import GetImageForm from './GetImageForm';
 
 class App extends Component {
-  constructor(){
-    super();
-  }
 
   render() {
     return (
