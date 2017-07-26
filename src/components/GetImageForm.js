@@ -12,7 +12,7 @@ export default class GetImageForm extends Component {
       images: [],
       rover: 'Curiosity',
       camera: 'fhaz',
-      sol: '1001'
+      sol: '1000'
     }
 
     this._handleChange = this._handleChange.bind(this);
