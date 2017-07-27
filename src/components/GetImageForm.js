@@ -80,7 +80,7 @@ export default class GetImageForm extends Component {
         <GetImageButton handleSubmit={ this._handleSubmit }/>
 
         <div className="images-container">
-          { allImages }
+          { allImages.length > 0 ? allImages : 'Select Again' }
         </div>
 
       </div>
