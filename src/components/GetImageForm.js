@@ -21,26 +21,24 @@ export default class GetImageForm extends Component {
   }
 
   _handleChange(event){
+    console.log("fired change", event.target.name);
     let object = {};
     object[event.target.name] = event.target.value;
     this.setState(object);
+    console.log(this.state);
   }
 
   _handleSubmit(event){
     event.preventDefault();
 
-    let rover = this.state.rover;
-    let camera = this.state.camera;
-    let number = this.state.sol;
-
-    const IMG_URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${number}&camera=${camera}&api_key=${API_KEY}`;
+    const IMG_URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.state.rover}/photos?sol=${this.state.sol}&camera=${this.state.camera}&api_key=${API_KEY}`;
 
     fetch(IMG_URL).then((result) => {
       result.json().then((response) => {
+        console.log('response', response.photos);
         this.setState({
           images: response.photos
         })
-        console.log(response.photos);
       })
     })
   }
@@ -52,10 +50,12 @@ export default class GetImageForm extends Component {
     return (
       <div>
         <h1>Mars Rover Images</h1>
+        <p>Select some options to explore Mars!</p>
+
         <form className="inputs flex-center">
           <div>
             <label>Rover</label>
-            <select onChange={ this._handleChange } name="rover" value={this.state.rover}>
+            <select className="browser-default" onChange={ this._handleChange } name="rover" value={ this.state.rover }>
               <option value="Curiosity">Curiosity</option>
               <option value="Opportunity">Opportunity</option>
               <option value="Spirit">Spirit</option>
@@ -64,7 +64,7 @@ export default class GetImageForm extends Component {
 
           <div>
             <label>Camera</label>
-            <select onChange={ this._handleChange } name="camera" value={ this.state.camera }>
+            <select className="browser-default" onChange={ this._handleChange } name="camera" value={ this.state.camera }>
               <option value="fhaz">FHAZ (Front Hazard)</option>
               <option value="rhaz">RHAZ (Rear Hazard)</option>
               <option value="navcam">NAVCAM (Navigation Cam)</option>
@@ -80,7 +80,7 @@ export default class GetImageForm extends Component {
         <GetImageButton handleSubmit={ this._handleSubmit }/>
 
         <div className="images-container">
-          { allImages.length > 0 ? allImages : 'Select Again' }
+          { allImages.length > 0 ? allImages : 'Try another combination' }
         </div>
 
       </div>
