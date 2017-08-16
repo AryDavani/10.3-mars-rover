@@ -3,18 +3,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("../images/space.jpg");
+  background-size: cover;
+  color: white;
 }
 .body {
   text-align: center;
 }
 .flex-center {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
-
-.inputs {
-  margin-top: 50px;
-  margin-bottom: 20px;
+.inputs div {
+  margin: 30px;
 }
 
 img {
@@ -27,15 +29,16 @@ img {
 }
 
 h1 {
+  padding: 40px 0px;
   color: white;
   /*font-family: 'Titillium Web', sans-serif;*/
   /*font-family: 'Michroma', sans-serif;*/
   font-family: 'Orbitron', sans-serif;
-  font-size: 50px;
+  font-size: 70px;
   letter-spacing: 10px;
-  padding: 30px;
-  background-color: #161616;
-  box-shadow: 0 0 20px black;
+  /*padding: 30px;*/
+  /*background-color: #161616;*/
+  /*box-shadow: 0 0 20px black;*/
   margin: 0;
 }
 

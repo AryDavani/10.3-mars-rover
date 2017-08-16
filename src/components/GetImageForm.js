@@ -55,7 +55,7 @@ export default class GetImageForm extends Component {
         <form className="inputs flex-center">
           <div>
             <label>Rover</label>
-            <select className="browser-default" onChange={ this._handleChange } name="rover" value={ this.state.rover }>
+            <select className="browser-default black-text" onChange={ this._handleChange } name="rover" value={ this.state.rover }>
               <option value="Curiosity">Curiosity</option>
               <option value="Opportunity">Opportunity</option>
               <option value="Spirit">Spirit</option>
@@ -64,7 +64,7 @@ export default class GetImageForm extends Component {
 
           <div>
             <label>Camera</label>
-            <select className="browser-default" onChange={ this._handleChange } name="camera" value={ this.state.camera }>
+            <select className="browser-default black-text" onChange={ this._handleChange } name="camera" value={ this.state.camera }>
               <option value="fhaz">FHAZ (Front Hazard)</option>
               <option value="rhaz">RHAZ (Rear Hazard)</option>
               <option value="navcam">NAVCAM (Navigation Cam)</option>
@@ -73,14 +73,17 @@ export default class GetImageForm extends Component {
 
           <div>
             <label>Martian Sol: 1000-2000</label>
-            <input name="sol" type="number" onChange={ this._handleChange } max="2000" min="1000" value={ this.state.sol }/>
+            <input className="" name="sol" type="number" onChange={ this._handleChange } max="2000" min="1000" value={ this.state.sol }/>
+          </div>
+
+          <div>
+            <GetImageButton handleSubmit={ this._handleSubmit }/>
           </div>
         </form>
 
-        <GetImageButton handleSubmit={ this._handleSubmit }/>
 
         <div className="images-container">
-          { allImages.length > 0 ? allImages : 'Try another combination' }
+          { allImages.length > 0 ? allImages : 'No Photos? Try another combination' }
         </div>
 
       </div>
