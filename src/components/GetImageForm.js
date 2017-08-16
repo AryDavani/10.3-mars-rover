@@ -49,7 +49,7 @@ export default class GetImageForm extends Component {
     })
     return (
       <div>
-        <h1>Mars Rover Images</h1>
+        <h1 className='mars-header'>Mars Rover Images</h1>
         <p>Select some options to explore Mars!</p>
 
         <form className="inputs flex-center">
