@@ -6,10 +6,19 @@ body {
   background-image: url("../images/space.jpg");
   background-size: cover;
   color: white;
-}
-.body {
   text-align: center;
 }
+
+/* label focus color */
+ .sol-select input:focus + label {
+   color: gray !important;
+ }
+ /* label underline focus color */
+ .sol-select input:focus {
+   border-bottom: 1px solid gray !important;
+   box-shadow: 0 1px 0 0 gray !important
+ }
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -47,4 +56,11 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.try-again {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }

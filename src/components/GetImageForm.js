@@ -50,11 +50,11 @@ export default class GetImageForm extends Component {
     return (
       <div>
         <h1 className='mars-header'>Mars Rover Images</h1>
-        <p>Select some options to explore Mars!</p>
+        <h5>Select some options to explore Mars!</h5>
 
         <form className="inputs flex-center">
           <div>
-            <label>Rover</label>
+            <label><h6>Rover</h6></label>
             <select className="browser-default black-text" onChange={ this._handleChange } name="rover" value={ this.state.rover }>
               <option value="Curiosity">Curiosity</option>
               <option value="Opportunity">Opportunity</option>
@@ -63,7 +63,7 @@ export default class GetImageForm extends Component {
           </div>
 
           <div>
-            <label>Camera</label>
+            <label><h6>Camera</h6></label>
             <select className="browser-default black-text" onChange={ this._handleChange } name="camera" value={ this.state.camera }>
               <option value="fhaz">FHAZ (Front Hazard)</option>
               <option value="rhaz">RHAZ (Rear Hazard)</option>
@@ -71,8 +71,8 @@ export default class GetImageForm extends Component {
             </select>
           </div>
 
-          <div>
-            <label>Martian Sol: 1000-2000</label>
+          <div className="sol-select">
+            <label><h6>Martian Sol: 1000-2000</h6></label>
             <input className="" name="sol" type="number" onChange={ this._handleChange } max="2000" min="1000" value={ this.state.sol }/>
           </div>
 
@@ -83,7 +83,7 @@ export default class GetImageForm extends Component {
 
 
         <div className="images-container">
-          { allImages.length > 0 ? allImages : 'No Photos? Try another combination' }
+          { allImages.length > 0 ? allImages : <p className="try-again">No Photos? Try another combination</p> }
         </div>
 
       </div>
