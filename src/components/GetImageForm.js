@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GetImageButton from './GetImageButton';
 import ImageDisplay from './ImageDisplay';
+import CameraOptions from './CameraOptions';
 
 const API_KEY = 'YsufMlmxBpbmZbBZ1ITvaOESX5ocgzaKBzVDnpTL';
 
@@ -64,11 +65,7 @@ export default class GetImageForm extends Component {
 
           <div>
             <label><h6>Camera</h6></label>
-            <select className="browser-default black-text" onChange={ this._handleChange } name="camera" value={ this.state.camera }>
-              <option value="fhaz">FHAZ (Front Hazard)</option>
-              <option value="rhaz">RHAZ (Rear Hazard)</option>
-              <option value="navcam">NAVCAM (Navigation Cam)</option>
-            </select>
+            <CameraOptions handleChange={ this._handleChange } state={ this.state }/>
           </div>
 
           <div className="sol-select">
