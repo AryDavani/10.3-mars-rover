@@ -32,7 +32,7 @@ body {
 
 img {
   height: 400px;
-  width: auto;
+  width: 400px;
   margin: 1vw;
   flex-basis: 20%;
   border-radius: 5px;
